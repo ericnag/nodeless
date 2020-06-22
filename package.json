@@ -1,0 +1,17 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "description": "```sh ## Para criar: serverless create --template aws-nodejs --path nodeless",
+  "main": "optimize.js",
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --plataform=linux --arch=x64 --target=12.18.1 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.25.4"
+  }
+}
